@@ -1,0 +1,43 @@
+font-size = 13
+font-family = JetBrainsMono Nerd Font
+font-feature = calt
+font-feature = liga
+font-thicken = false
+
+cursor-style = underline
+cursor-style-blink = false
+mouse-hide-while-typing = true
+scrollback-limit = 100000
+
+window-padding-x = 10
+window-padding-y = 6
+window-padding-balance = true
+window-decoration = true
+window-inherit-working-directory = true
+window-save-state = always
+
+background-opacity = 0.78
+background-blur = 18
+theme = Catppuccin Mocha
+gtk-titlebar = false
+foreground = #cdd6f4
+cursor-color = #f5c2e7
+selection-background = #181825
+selection-foreground = #cdd6f4
+
+palette = 0=#181825
+palette = 1=#f38ba8
+palette = 2=#a6e3a1
+palette = 3=#f9e2af
+palette = 4=#89b4fa
+palette = 5=#f5c2e7
+palette = 6=#94e2d5
+palette = 7=#bac2de
+palette = 8=#313244
+palette = 9=#f38ba8
+palette = 10=#a6e3a1
+palette = 11=#f9e2af
+palette = 12=#89b4fa
+palette = 13=#f5c2e7
+palette = 14=#94e2d5
+palette = 15=#a6adc8
