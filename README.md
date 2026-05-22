@@ -16,7 +16,7 @@ hypr/     .config/hypr/                 (hyprland + hypridle + hyprlock + hyprpa
 gnome/    .config/{gtk-3.0/bookmarks, monitors.xml, mimeapps.list}
           .themes/                       (Tahoe-Dark / -Amber / -Light)
           snapshot/{org-gnome.dconf, extensions.list}   (NOT symlinked — see Restore)
-          restore.sh                                    (run on fresh machines)
+          restore.sh        (loads dconf, links gtk-4.0 theme, enables extensions)
 scripts/  .local/bin/                   (drop personal scripts here)
 ```
 
@@ -125,11 +125,17 @@ pipx install gnome-extensions-cli                    # provides `gext`
 gext install dash-to-dock@micxgx.gmail.com clipboard-indicator@tudmotu.com
 ```
 
-Restore dconf + enable extensions:
+Restore dconf (theme + `color-scheme`), link the GTK4 theme, and enable extensions:
 
 ```
+stow -t ~ gnome                  # first: puts ~/.themes/Tahoe-Dark in place
 ~/dotfiles_stow/gnome/restore.sh
 ```
+
+`restore.sh` applies the dconf snapshot (sets `gtk-theme='Tahoe-Dark'` +
+`color-scheme='prefer-dark'`) and symlinks the theme's `gtk-4.0/` css into
+`~/.config/gtk-4.0/` so libadwaita / GTK4 apps pick up the dark theme. The
+theme must already be stowed to `~/.themes` before running it.
 
 To refresh the snapshot after tweaking GNOME settings:
 
