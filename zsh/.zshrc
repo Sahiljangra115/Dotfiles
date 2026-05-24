@@ -63,7 +63,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'  # case-insensitive tab
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
-source /opt/esp-idf/export.sh
+[ -f /opt/esp-idf/export.sh ] && source /opt/esp-idf/export.sh
 
 export FZF_DEFAULT_OPTS="--height=40% --layout=reverse --border --info=inline"
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window=up:3:wrap"
