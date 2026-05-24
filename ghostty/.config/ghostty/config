@@ -9,16 +9,24 @@ cursor-style-blink = false
 mouse-hide-while-typing = true
 scrollback-limit = 100000
 
-window-padding-x = 10
+window-padding-x = 6 
 window-padding-y = 6
 window-padding-balance = true
 window-decoration = true
 window-inherit-working-directory = true
 window-save-state = always
 
-background-opacity = 0.78
-background-blur = 18
-theme = Catppuccin Mocha
+# override Tahoe-Dark theme's dark window padding (the black border ring),
+# keep its rounded corners. see glass.css for details.
+gtk-custom-css = glass.css
+
+# frosted-glass look: dark base for text contrast + partial transparency so
+# the blurred wallpaper still shows. nudge opacity 0.5-0.75 (higher = readable,
+# lower = more glass). darker `background` = more contrast for light text.
+background = #11111b
+background-opacity = 0.6
+background-blur = 8
+# theme = Catppuccin Mocha
 gtk-titlebar = false
 foreground = #cdd6f4
 cursor-color = #f5c2e7

@@ -1,0 +1,28 @@
+/*
+ * glass.css — remove the dark "border" ring around Ghostty under the
+ * Tahoe-Dark (mac-tahoe) GTK4 theme, while keeping the rounded corners.
+ *
+ * Cause: ~/.themes/Tahoe-Dark/gtk-4.0/gtk.css styles the top-level `window`
+ * node with `padding: 10px` + `background-color: rgba(0,0,0,0.6)`. That 10px
+ * padding wraps Ghostty's terminal surface and is filled with the dark color
+ * -> the black ring. We zero the padding + dark fill + shadow but leave
+ * border-radius (30px) untouched so the rounded mac corners remain.
+ *
+ * Note: GTK4 CSS does NOT support `!important`, and `border: none` is invalid
+ * (border shorthand needs a color). Use plain declarations + `border-width: 0`.
+ */
+
+window {
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  border-width: 0;
+}
+
+window.csd decoration,
+decoration {
+  box-shadow: none;
+  border-width: 0;
+  margin: 0;
+  background-color: transparent;
+}
