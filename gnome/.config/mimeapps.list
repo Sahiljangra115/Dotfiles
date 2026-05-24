@@ -13,6 +13,7 @@ x-scheme-handler/claude-cli=claude-code-url-handler.desktop
 text/x-verilog=antigravity.desktop
 x-scheme-handler/about=google-chrome.desktop
 x-scheme-handler/unknown=google-chrome.desktop
+x-scheme-handler/antigravity=antigravity.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen.desktop;
