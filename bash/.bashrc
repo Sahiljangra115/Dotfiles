@@ -134,3 +134,4 @@ export PATH="/usr/local/nvim/bin:$PATH"
 alias ls='eza --icons --group-directories-first'
 alias ll='eza -alF --icons --group-directories-first'
 alias la='eza -a --icons --group-directories-first'
+export PATH="$HOME/.local/bin:$PATH"

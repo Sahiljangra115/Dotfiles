@@ -1,6 +1,14 @@
+[Extensions]
+window-height=563
+window-width=763
+
+[Loupe]
+show-properties=true
+
 [Ptyxis]
 default-profile-uuid='23e23164c5bed926ce0c884a69e03c98'
 font-name='SF Mono Semi-Bold 12'
+interface-style='system'
 profile-uuids=['23e23164c5bed926ce0c884a69e03c98']
 use-system-font=false
 window-size=(uint32 92, uint32 32)
@@ -35,8 +43,11 @@ panel-id='alarm'
 size=(870, 690)
 
 [control-center]
-last-panel='sound'
-window-state=(980, 640, true)
+last-panel='bluetooth'
+window-state=(980, 640, false)
+
+[desktop/a11y/magnifier]
+cross-hairs-length=58
 
 [desktop/app-folders]
 folder-children=['System', 'Utilities', 'YaST', 'Pardus', '02693361-ce1a-4885-9394-373bebeae364']
@@ -68,8 +79,8 @@ translate=true
 [desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///home/ladliju/.local/share/backgrounds/2026-04-29-17-53-24-por.jpg'
-picture-uri-dark='file:///home/ladliju/.local/share/backgrounds/2026-04-29-17-53-24-por.jpg'
+picture-uri='file:///home/ladliju/.local/share/backgrounds/2026-04-24-22-52-17-wallhaven-9o2owd_1920x1080.png'
+picture-uri-dark='file:///home/ladliju/.local/share/backgrounds/2026-04-24-22-52-17-wallhaven-9o2owd_1920x1080.png'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -79,24 +90,31 @@ sources=[('xkb', 'us')]
 [desktop/interface]
 color-scheme='prefer-dark'
 cursor-size=24
-cursor-theme='default'
+cursor-theme='MacTahoe-dark'
 document-font-name='SF Compact Display Semi-Bold 12'
+enable-animations=true
 font-antialiasing='rgba'
 font-name='SF Compact Display Semi-Bold 11'
-gtk-theme='Tahoe-Dark'
-icon-theme='MacTahoe'
+gtk-theme='MacTahoe-Dark'
+icon-theme='MacTahoe-dark'
 monospace-font-name='SF Compact Display Semi-Bold 11'
-text-scaling-factor=1.0
+text-scaling-factor=0.98999999999999999
 
 [desktop/notifications]
-application-children=['org-gnome-nautilus', 'gnome-power-panel', 'zen', 'gnome-about-panel', 'firefox', 'spotify', 'com-mitchellh-ghostty', 'brave-browser', 'org-gnome-showtime', 'obsidian', 'io-bassi-amberol', 'android-studio', 'code', 'org-gnome-settings', 'google-chrome', 'davinciresolve', 'org-gnome-clocks', 'org-gnome-extensions']
+application-children=['org-gnome-nautilus', 'gnome-power-panel', 'zen', 'gnome-about-panel', 'firefox', 'spotify', 'com-mitchellh-ghostty', 'brave-browser', 'org-gnome-showtime', 'obsidian', 'io-bassi-amberol', 'android-studio', 'code', 'org-gnome-settings', 'google-chrome', 'davinciresolve', 'org-gnome-clocks', 'org-gnome-extensions', 'vlc', 'com-rafaelmardojai-blanket', 'claude-desktop']
 show-banners=true
 
 [desktop/notifications/application/android-studio]
 application-id='android-studio.desktop'
 
+[desktop/notifications/application/antigravity]
+application-id='antigravity.desktop'
+
 [desktop/notifications/application/brave-browser]
 application-id='brave-browser.desktop'
+
+[desktop/notifications/application/claude-desktop]
+application-id='claude-desktop.desktop'
 
 [desktop/notifications/application/code]
 application-id='code.desktop'
@@ -104,8 +122,14 @@ application-id='code.desktop'
 [desktop/notifications/application/com-mitchellh-ghostty]
 application-id='com.mitchellh.ghostty.desktop'
 
+[desktop/notifications/application/com-rafaelmardojai-blanket]
+application-id='com.rafaelmardojai.Blanket.desktop'
+
 [desktop/notifications/application/davinciresolve]
 application-id='DaVinciResolve.desktop'
+
+[desktop/notifications/application/docker-desktop]
+application-id='docker-desktop.desktop'
 
 [desktop/notifications/application/firefox]
 application-id='firefox.desktop'
@@ -125,8 +149,14 @@ application-id='io.bassi.Amberol.desktop'
 [desktop/notifications/application/obsidian]
 application-id='obsidian.desktop'
 
+[desktop/notifications/application/onlyoffice-desktopeditors]
+application-id='onlyoffice-desktopeditors.desktop'
+
 [desktop/notifications/application/org-gnome-clocks]
 application-id='org.gnome.clocks.desktop'
+
+[desktop/notifications/application/org-gnome-decibels]
+application-id='org.gnome.Decibels.desktop'
 
 [desktop/notifications/application/org-gnome-extensions]
 application-id='org.gnome.Extensions.desktop'
@@ -143,6 +173,9 @@ application-id='org.gnome.Showtime.desktop'
 [desktop/notifications/application/spotify]
 application-id='spotify.desktop'
 
+[desktop/notifications/application/vlc]
+application-id='vlc.desktop'
+
 [desktop/notifications/application/zen]
 application-id='zen.desktop'
 
@@ -151,14 +184,18 @@ numlock-state=true
 
 [desktop/peripherals/mouse]
 left-handed=true
+speed=0.33057851239669422
 
 [desktop/peripherals/touchpad]
+click-method='fingers'
+send-events='enabled'
+speed=0.3223140495867769
 two-finger-scrolling-enabled=true
 
 [desktop/screensaver]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///home/ladliju/.local/share/backgrounds/2026-04-29-17-53-24-por.jpg'
+picture-uri='file:///home/ladliju/.local/share/backgrounds/2026-04-24-22-52-17-wallhaven-9o2owd_1920x1080.png'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -171,8 +208,15 @@ theme-name='__custom'
 
 [desktop/wm/keybindings]
 close=['<Super>q']
+move-to-workspace-1=@as []
+show-desktop=['<Super>d']
 switch-input-source=@as []
 switch-input-source-backward=@as []
+switch-to-workspace-1=['<Super>1']
+switch-to-workspace-2=['<Super>2']
+switch-to-workspace-3=['<Super>3']
+switch-to-workspace-4=['<Super>4']
+toggle-fullscreen=['F12']
 
 [desktop/wm/preferences]
 focus-mode='mouse'
@@ -188,6 +232,22 @@ sidebar-width=200
 window-height=480
 window-width=600
 
+[gnome-system-monitor]
+current-tab='resources'
+maximized=false
+show-dependencies=false
+show-whose-processes='user'
+window-height=720
+window-width=800
+
+[gnome-system-monitor/proctree]
+col-26-visible=false
+col-26-width=0
+
+[meld/window-state]
+height=261
+width=498
+
 [mutter]
 overlay-key='Super_L'
 
@@ -200,8 +260,12 @@ migrated-gtk-settings=true
 
 [nautilus/window-state]
 initial-size=(890, 550)
-initial-size-file-chooser=(890, 550)
+initial-size-file-chooser=(879, 565)
 maximized=false
+
+[nm-applet]
+disable-connected-notifications=true
+suppress-wireless-networks-available=true
 
 [nm-applet/eap/30ac46ac-e64b-40a6-9c33-5ee46c43b795]
 ignore-ca-cert=false
@@ -236,15 +300,24 @@ pen-color='blue'
 pen-stroke=1.0
 show-sidebar=false
 sidebar-page='thumbnails'
-sizing-mode='automatic'
+sizing-mode='free'
 text-color='blue'
 window-height=930
-window-maximized=true
+window-maximized=false
 window-width=1717
-zoom=0.65143067733001692
+zoom=0.54927480702822673
+
+[portal/filechooser/antigravity]
+last-folder-path='/home/ladliju/Developer/Final year project'
+
+[portal/filechooser/code]
+last-folder-path='/home/ladliju/Developer/Machine-learning'
 
 [portal/filechooser/com.github.johnfactotum.Foliate]
 last-folder-path='/home/ladliju/Documents/Books'
+
+[portal/filechooser/com.google.Chrome]
+last-folder-path='/home/ladliju/Downloads'
 
 [portal/filechooser/io.bassi.Amberol]
 last-folder-path='/home/ladliju/Music/Shri Hit'
@@ -265,7 +338,7 @@ last-folder-path='/usr/share/icons'
 last-folder-path='/home/ladliju/class/wcs'
 
 [portal/filechooser/zen]
-last-folder-path='/home/ladliju/Developer/Final year project'
+last-folder-path='/home/ladliju/hackathon/wemakedevs'
 
 [power-manager]
 info-history-type='charge'
@@ -279,9 +352,12 @@ night-light-schedule-automatic=false
 donation-reminder-last-shown=int64 1777051231551524
 
 [settings-daemon/plugins/media-keys]
+control-center=['<Super>i']
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
+home=['<Super>e']
 logout=['<Shift><Super>q']
 shutdown=['<Shift><Super>s']
+www=['<Super>z']
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Super>e'
@@ -307,37 +383,59 @@ name='terminal'
 idle-dim=false
 power-saver-profile-on-low-battery=false
 sleep-inactive-ac-timeout=1200
+sleep-inactive-ac-type='nothing'
 sleep-inactive-battery-timeout=900
+sleep-inactive-battery-type='suspend'
 
 [shell]
-app-picker-layout=[{'nm-connection-editor.desktop': <{'position': <0>}>, 'Alacritty.desktop': <{'position': <1>}>, 'bssh.desktop': <{'position': <2>}>, 'bvnc.desktop': <{'position': <3>}>, 'avahi-discover.desktop': <{'position': <4>}>, 'org.gnome.SimpleScan.desktop': <{'position': <5>}>, 'org.gnome.Settings.desktop': <{'position': <6>}>, 'brave-browser.desktop': <{'position': <7>}>, 'org.gnome.Showtime.desktop': <{'position': <8>}>, 'org.gnome.Snapshot.desktop': <{'position': <9>}>, 'btop.desktop': <{'position': <10>}>, 'Utilities': <{'position': <11>}>, 'System': <{'position': <12>}>, 'btrfs-assistant.desktop': <{'position': <13>}>, 'arch-update.desktop': <{'position': <14>}>, 'arch-update-tray.desktop': <{'position': <15>}>, 'org.cachyos.KernelManager.desktop': <{'position': <16>}>, 'cachyos-pi.desktop': <{'position': <17>}>, 'cmake-gui.desktop': <{'position': <18>}>, 'org.gnome.Evince.desktop': <{'position': <19>}>, 'org.kde.dolphin.desktop': <{'position': <20>}>, 'org.gnome.Extensions.desktop': <{'position': <21>}>, 'firefox.desktop': <{'position': <22>}>}, {'kitty.desktop': <{'position': <0>}>, '02693361-ce1a-4885-9394-373bebeae364': <{'position': <1>}>, 'micro.desktop': <{'position': <2>}>, 'nvim.desktop': <{'position': <3>}>, 'nvidia-settings.desktop': <{'position': <4>}>, 'org.gnome.PowerStats.desktop': <{'position': <5>}>, 'qv4l2.desktop': <{'position': <6>}>, 'qvidcap.desktop': <{'position': <7>}>, 'rofi.desktop': <{'position': <8>}>, 'rofi-theme-selector.desktop': <{'position': <9>}>, 'org.cachyos.scx-manager.desktop': <{'position': <10>}>, 'com.shellyorg.shelly.desktop': <{'position': <11>}>, 'vim.desktop': <{'position': <12>}>, 'org.pulseaudio.pavucontrol.desktop': <{'position': <13>}>, 'xgps.desktop': <{'position': <14>}>, 'xgpsspeed.desktop': <{'position': <15>}>, 'com.mattjakeman.ExtensionManager.desktop': <{'position': <16>}>, 'com.github.wwmm.easyeffects.desktop': <{'position': <17>}>, 'android-studio.desktop': <{'position': <18>}>, 'blackmagicraw-player.desktop': <{'position': <19>}>, 'blackmagicraw-speedtest.desktop': <{'position': <20>}>, 'DaVinciControlPanelsSetup.desktop': <{'position': <21>}>, 'DaVinciResolve.desktop': <{'position': <22>}>, 'org.gnome.clocks.desktop': <{'position': <23>}>}, {'lstopo.desktop': <{'position': <0>}>, 'org.gnome.TextEditor.desktop': <{'position': <1>}>, 'org.gnome.Calculator.desktop': <{'position': <2>}>, 'io.bassi.Amberol.desktop': <{'position': <3>}>, 'auto-cpufreq-gtk.desktop': <{'position': <4>}>, 'com.github.johnfactotum.Foliate.desktop': <{'position': <5>}>, 'io.github.realmazharhussain.GdmSettings.desktop': <{'position': <6>}>, 'google-chrome.desktop': <{'position': <7>}>, 'grub-customizer.desktop': <{'position': <8>}>, 'jdownloader.desktop': <{'position': <9>}>, 'install4j_kzxqek-JDownloader2.desktop': <{'position': <10>}>, 'com.obsproject.Studio.desktop': <{'position': <11>}>, 'obsidian.desktop': <{'position': <12>}>, 'onlyoffice-desktopeditors.desktop': <{'position': <13>}>, 'jconsole-java17-openjdk.desktop': <{'position': <14>}>, 'jshell-java17-openjdk.desktop': <{'position': <15>}>, 'proton.vpn.app.gtk.desktop': <{'position': <16>}>, 'org.gnome.Ptyxis.desktop': <{'position': <17>}>}]
-disabled-extensions=['blur-my-shell@aunetx']
+app-picker-layout=[{'nm-connection-editor.desktop': <{'position': <0>}>, 'Alacritty.desktop': <{'position': <1>}>, 'bssh.desktop': <{'position': <2>}>, 'bvnc.desktop': <{'position': <3>}>, 'avahi-discover.desktop': <{'position': <4>}>, 'org.gnome.SimpleScan.desktop': <{'position': <5>}>, 'org.gnome.Settings.desktop': <{'position': <6>}>, 'brave-browser.desktop': <{'position': <7>}>, 'org.gnome.Showtime.desktop': <{'position': <8>}>, 'org.gnome.Snapshot.desktop': <{'position': <9>}>, 'btop.desktop': <{'position': <10>}>, 'Utilities': <{'position': <11>}>, 'System': <{'position': <12>}>, 'btrfs-assistant.desktop': <{'position': <13>}>, 'arch-update.desktop': <{'position': <14>}>, 'arch-update-tray.desktop': <{'position': <15>}>, 'org.cachyos.KernelManager.desktop': <{'position': <16>}>, 'cachyos-pi.desktop': <{'position': <17>}>, 'cmake-gui.desktop': <{'position': <18>}>, 'org.gnome.Evince.desktop': <{'position': <19>}>, 'org.kde.dolphin.desktop': <{'position': <20>}>, 'org.gnome.Extensions.desktop': <{'position': <21>}>, 'firefox.desktop': <{'position': <22>}>}, {'kitty.desktop': <{'position': <0>}>, '02693361-ce1a-4885-9394-373bebeae364': <{'position': <1>}>, 'micro.desktop': <{'position': <2>}>, 'nvim.desktop': <{'position': <3>}>, 'nvidia-settings.desktop': <{'position': <4>}>, 'org.gnome.PowerStats.desktop': <{'position': <5>}>, 'qv4l2.desktop': <{'position': <6>}>, 'qvidcap.desktop': <{'position': <7>}>, 'rofi.desktop': <{'position': <8>}>, 'rofi-theme-selector.desktop': <{'position': <9>}>, 'org.cachyos.scx-manager.desktop': <{'position': <10>}>, 'com.shellyorg.shelly.desktop': <{'position': <11>}>, 'vim.desktop': <{'position': <12>}>, 'org.pulseaudio.pavucontrol.desktop': <{'position': <13>}>, 'xgps.desktop': <{'position': <14>}>, 'xgpsspeed.desktop': <{'position': <15>}>, 'com.mattjakeman.ExtensionManager.desktop': <{'position': <16>}>, 'com.github.wwmm.easyeffects.desktop': <{'position': <17>}>, 'android-studio.desktop': <{'position': <18>}>, 'docker-desktop.desktop': <{'position': <19>}>, 'ipython.desktop': <{'position': <20>}>, 'jupyter-notebook.desktop': <{'position': <21>}>, 'org.gnome.clocks.desktop': <{'position': <22>}>}, {'lstopo.desktop': <{'position': <0>}>, 'org.gnome.TextEditor.desktop': <{'position': <1>}>, 'org.gnome.Calculator.desktop': <{'position': <2>}>, 'io.bassi.Amberol.desktop': <{'position': <3>}>, 'auto-cpufreq-gtk.desktop': <{'position': <4>}>, 'com.github.johnfactotum.Foliate.desktop': <{'position': <5>}>, 'io.github.realmazharhussain.GdmSettings.desktop': <{'position': <6>}>, 'google-chrome.desktop': <{'position': <7>}>, 'grub-customizer.desktop': <{'position': <8>}>, 'jdownloader.desktop': <{'position': <9>}>, 'install4j_kzxqek-JDownloader2.desktop': <{'position': <10>}>, 'com.obsproject.Studio.desktop': <{'position': <11>}>, 'obsidian.desktop': <{'position': <12>}>, 'onlyoffice-desktopeditors.desktop': <{'position': <13>}>, 'jconsole-java17-openjdk.desktop': <{'position': <14>}>, 'jshell-java17-openjdk.desktop': <{'position': <15>}>, 'proton.vpn.app.gtk.desktop': <{'position': <16>}>, 'org.gnome.Ptyxis.desktop': <{'position': <17>}>, 'jupyterlab.desktop': <{'position': <18>}>, 'lens.desktop': <{'position': <19>}>, 'org.rncbc.qpwgraph.desktop': <{'position': <20>}>, 'scrcpy.desktop': <{'position': <21>}>, 'scrcpy-console.desktop': <{'position': <22>}>, 'vlc.desktop': <{'position': <23>}>}, {'yazi.desktop': <{'position': <0>}>}]
+disable-user-extensions=false
+disabled-extensions=['blur-my-shell@aunetx', 'status-icons@gnome-shell-extensions.gcampax.github.com', 'day-progress@arcaege.github.io', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'light-style@gnome-shell-extensions.gcampax.github.com', 'arcmenu@arcmenu.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'just-perfection-desktop@just-perfection', 'window-list@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'systemd-manager@hardpixel.eu', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com']
 enabled-extensions=['dash-to-dock@micxgx.gmail.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'clipboard-indicator@tudmotu.com']
-favorite-apps=['org.gnome.Nautilus.desktop', 'zen.desktop', 'com.mitchellh.ghostty.desktop', 'code.desktop', 'antigravity.desktop', 'dev.zed.Zed.desktop', 'spotify.desktop']
+favorite-apps=['org.gnome.Nautilus.desktop', 'zen.desktop', 'claude-desktop.desktop', 'com.mitchellh.ghostty.desktop', 'code.desktop', 'antigravity.desktop', 'dev.zed.Zed.desktop', 'spotify.desktop', 'com.rafaelmardojai.Blanket.desktop']
 last-selected-power-profile='performance'
 welcome-dialog-last-shown-version='50.1'
 
+[shell/extensions/arcmenu]
+arcmenu-hotkey=@as []
+arcmenu-hotkey-overlay-key-enabled=true
+dash-to-panel-standalone=false
+hotkey-open-primary-monitor=false
+menu-button-icon='resource:///org/gnome/shell/extensions/arcmenu/icons/scalable/actions/icon-a-symbolic.svg'
+menu-layout='arcmenu'
+multi-monitor=false
+prefs-visible-page=0
+search-entry-border-radius=(true, 25)
+show-activities-button=false
+update-notifier-project-version=73
+
 [shell/extensions/blur-my-shell]
+rounded-blur-found=false
 settings-version=2
 
-[shell/extensions/blur-my-shell/appfolder]
-brightness=0.59999999999999998
-sigma=30
+[shell/extensions/blur-my-shell/applications]
+pipeline='pipeline_default'
+
+[shell/extensions/blur-my-shell/coverflow-alt-tab]
+pipeline='pipeline_default'
 
 [shell/extensions/blur-my-shell/dash-to-dock]
-blur=true
-brightness=0.59999999999999998
-sigma=30
-static-blur=true
-style-dash-to-dock=0
+pipeline='pipeline_default_rounded'
+
+[shell/extensions/blur-my-shell/lockscreen]
+pipeline='pipeline_default'
+
+[shell/extensions/blur-my-shell/overview]
+pipeline='pipeline_default'
 
 [shell/extensions/blur-my-shell/panel]
-brightness=0.59999999999999998
-sigma=30
+pipeline='pipeline_default'
 
-[shell/extensions/blur-my-shell/window-list]
-brightness=0.59999999999999998
-sigma=30
+[shell/extensions/blur-my-shell/popup]
+pipeline='pipeline_default_rounded'
+
+[shell/extensions/blur-my-shell/screenshot]
+pipeline='pipeline_default'
 
 [shell/extensions/dash-to-dock]
 apply-custom-theme=false
@@ -360,8 +458,30 @@ preview-size-scale=0.0
 running-indicator-style='DOTS'
 transparency-mode='DYNAMIC'
 
+[shell/extensions/just-perfection]
+accessibility-menu=true
+dash-icon-size=0
+panel=true
+panel-in-overview=true
+ripple-box=true
+search=true
+show-apps-button=true
+startup-status=1
+support-notifier-type=0
+theme=true
+window-demands-attention-focus=false
+window-picker-icon=true
+workspace=true
+workspaces-in-app-grid=true
+
 [shell/extensions/user-theme]
-name='Tahoe-Dark'
+name='MacTahoe-Dark'
+
+[shell/keybindings]
+switch-to-application-1=@as []
+switch-to-application-2=@as []
+switch-to-application-3=@as []
+switch-to-application-4=@as []
 
 [shell/world-clocks]
 locations=[<(uint32 2, <('New Delhi', 'VIDP', true, [(0.49858239547081096, 1.345939747314058)], [(0.49916416607037828, 1.3473941825396225)])>)>]

@@ -6,9 +6,9 @@ dconf load /org/gnome/ < "$here/snapshot/org-gnome.dconf"
 
 # GTK4 (libadwaita) apps ignore ~/.themes; symlink the active theme's gtk-4.0
 # css/assets into ~/.config/gtk-4.0. Targets that don't exist are skipped.
-theme_dir="$HOME/.themes/Tahoe-Dark/gtk-4.0"
+theme_dir="/usr/share/themes/MacTahoe-Dark/gtk-4.0"
 mkdir -p "$HOME/.config/gtk-4.0"
-for item in assets gtk.css gtk-dark.css; do
+for item in assets gtk.css gtk-dark.css windows-assets; do
   if [ -e "$theme_dir/$item" ]; then
     ln -sfn "$theme_dir/$item" "$HOME/.config/gtk-4.0/$item"
   else
