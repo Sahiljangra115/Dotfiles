@@ -14,6 +14,8 @@ text/x-verilog=antigravity.desktop
 x-scheme-handler/about=google-chrome.desktop
 x-scheme-handler/unknown=google-chrome.desktop
 x-scheme-handler/antigravity=antigravity.desktop
+image/png=org.gnome.Loupe.desktop
+image/jpeg=org.gnome.Loupe.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen.desktop;
@@ -21,3 +23,5 @@ x-scheme-handler/https=zen.desktop;
 text/html=zen.desktop;
 text/x-verilog=antigravity.desktop;
 x-scheme-handler/chrome=zen.desktop;
+image/png=org.gnome.Loupe.desktop;
+image/jpeg=org.gnome.Loupe.desktop;

@@ -82,7 +82,6 @@ bindkey "^[[1;5C" forward-word    # Ctrl + Right
 alias c='clear'
 #alias ls='ls --color=auto'
 
-
 alias ls='eza --icons --group-directories-first'
 alias ll='eza -alF --icons --group-directories-first'
 alias la='eza -a --icons --group-directories-first'
