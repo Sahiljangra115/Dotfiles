@@ -1,0 +1,6 @@
+[Unit]
+Description=Sync zsh history to dotfiles repo
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/dotfiles-sync-history

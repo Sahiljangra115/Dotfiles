@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Commits + pushes zsh history changes. Run periodically by
+# dotfiles-history-sync.timer (systemd --user), or by hand.
+set -euo pipefail
+
+REPO="$HOME/dotfiles_stow"
+cd "$REPO"
+
+git add zsh/.zsh_history
+git diff --cached --quiet -- zsh/.zsh_history && exit 0
+
+git commit -q -m "zsh: sync history $(date -Iseconds)"
+git push -q origin main
