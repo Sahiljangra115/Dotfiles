@@ -87,7 +87,10 @@ step_backup_conflicts() {
     [ -d "$REPO/$pkg" ] || continue
     while IFS= read -r -d '' src; do
       target="$HOME/${src#"$REPO/$pkg/"}"
-      if [ -e "$target" ] && [ ! -L "$target" ]; then
+      if [ -L "$target" ] && [[ "$(readlink -f "$target")" == "$REPO"/* ]]; then
+        continue # already a stow-owned symlink into this repo
+      fi
+      if [ -e "$target" ] || [ -L "$target" ]; then
         bak="$target.pre-stow"
         echo "  $target -> $bak"
         mkdir -p "$(dirname "$bak")"
