@@ -82,13 +82,14 @@ step_git_extras() {
 
 step_backup_conflicts() {
   log "4/8 backup files that would block stow"
-  local pkg src target bak
+  local pkg src target bak real_target
   for pkg in "${STOW_PACKAGES[@]}"; do
     [ -d "$REPO/$pkg" ] || continue
     while IFS= read -r -d '' src; do
       target="$HOME/${src#"$REPO/$pkg/"}"
-      if [ -L "$target" ] && [[ "$(readlink -f "$target")" == "$REPO"/* ]]; then
-        continue # already a stow-owned symlink into this repo
+      real_target="$(readlink -f "$target" 2>/dev/null || true)"
+      if [[ "$real_target" == "$REPO"/* ]]; then
+        continue # already points into this repo or resides inside a stowed directory
       fi
       if [ -e "$target" ] || [ -L "$target" ]; then
         bak="$target.pre-stow"
@@ -104,6 +105,12 @@ step_stow() {
   log "5/8 stow"
   cd "$REPO"
   stow --restow "${STOW_PACKAGES[@]}"
+}
+
+step_mimeapps() {
+  log "ensuring absolute symlink for mimeapps.list"
+  mkdir -p "$HOME/.config"
+  ln -sf "$REPO/gnome/.config/mimeapps.list" "$HOME/.config/mimeapps.list"
 }
 
 step_dconf() {
@@ -145,6 +152,7 @@ main() {
   step_git_extras
   step_backup_conflicts
   step_stow
+  step_mimeapps
   step_dconf
   step_shell
   step_history_sync
@@ -153,3 +161,4 @@ main() {
 }
 
 main "$@"
+

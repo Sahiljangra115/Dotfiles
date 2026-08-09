@@ -15,7 +15,13 @@
     *   Made `.popup-menu-content` transparent to prevent nested solid background overlaps.
     *   Disabled `border-image` on `.quick-settings` to prevent boxy shadow rendering.
     *   Forced GNOME Shell to reload the theme dynamically by toggling it off and on in GSettings.
+*   **Fixed `mimeapps.list` default application setting issue:**
+    *   Resolved GTK/GLib `g_file_replace` failure (`Failed to create file "../dotfiles_stow/gnome/.config/mimeapps.list.XXXXXX": No such file or directory`) when setting default applications (e.g. VLC media player).
+    *   Added `.config/mimeapps.list` to `gnome/.stow-local-ignore` to prevent Stow from creating relative symlinks for dynamic MIME configurations.
+    *   Added `step_mimeapps` in `install.sh` to manage `~/.config/mimeapps.list` as an absolute symlink to `$REPO/gnome/.config/mimeapps.list`, allowing desktop apps to atomically save default app settings directly into git.
+    *   Fixed `step_backup_conflicts` in `install.sh` to resolve symlink targets via `readlink -f` so stowed directories and files are skipped without creating unnecessary `.pre-stow` backup files inside the repo.
 
 ## Upcoming / Pending Actions
 
 *   *All tasks completed successfully!*
+
